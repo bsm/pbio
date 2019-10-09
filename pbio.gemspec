@@ -1,7 +1,6 @@
-
 Gem::Specification.new do |s|
   s.name        = 'pbio'
-  s.version     = '0.1.0'
+  s.version     = '0.2.0'
   s.authors     = ['Dimitrij Denissenko']
   s.email       = ['dimitrij@blacksquaremedia.com']
   s.summary     = 'Protobuf Streaming'
@@ -9,10 +8,10 @@ Gem::Specification.new do |s|
   s.homepage    = 'https://github.com/bsm/pbio'
   s.license     = 'MIT'
 
-  s.files         = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^spec/}) }
+  s.files         = `git ls-files -z`.split("\x0").reject {|f| f.match(%r{^spec/}) }
   s.test_files    = `git ls-files -z -- spec/*`.split("\x0")
   s.require_paths = ['lib']
-  s.required_ruby_version = '>= 2.2.0'
+  s.required_ruby_version = '>= 2.4.0'
 
   s.add_dependency 'google-protobuf'
 
@@ -20,4 +19,5 @@ Gem::Specification.new do |s|
   s.add_development_dependency 'rake'
   s.add_development_dependency 'rspec'
   s.add_development_dependency 'rubocop'
+  s.add_development_dependency 'rubocop-performance'
 end
