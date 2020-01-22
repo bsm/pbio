@@ -36,6 +36,11 @@ module PBIO
     # @param [IO] io object
     def initialize(io)
       @io = io
+      if @io.respond_to?(:binmode)
+        @io.binmode
+      elsif @io.respond_to?(:set_encoding)
+        @io.set_encoding(Encoding::BINARY)
+      end
     end
 
     # Writes a message to the IO stream.
