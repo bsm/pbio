@@ -12,6 +12,7 @@ describe PBIO::Delimited do
     expect(subject.write(msg1)).to eq(9)
     expect(subject.write(msg2)).to eq(9)
     expect(io.size).to eq(18)
+    expect(io.string.encoding).to eq(Encoding::BINARY)
 
     expect(subject.write(msg3)).to eq(32_007)
     expect(io.size).to eq(32_025)
