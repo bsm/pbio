@@ -24,10 +24,11 @@ func NewEncoder(w io.Writer) *Encoder {
 
 // Encode encodes a message.
 func (e *Encoder) Encode(msg proto.Message) error {
-	sz := proto.Size(msg)
+	opt := proto.MarshalOptions{}
+	sz := opt.Size(msg)
 	e.buf = e.buf[:binary.PutUvarint(e.buf, uint64(sz))]
 
-	data, err := proto.MarshalOptions{}.MarshalAppend(e.buf, msg)
+	data, err := opt.MarshalAppend(e.buf, msg)
 	if err != nil {
 		return err
 	}
@@ -68,5 +69,6 @@ func (d *Decoder) Decode(msg proto.Message) error {
 		return err
 	}
 
-	return proto.UnmarshalOptions{}.Unmarshal(d.buf, msg)
+	opt := proto.UnmarshalOptions{}
+	return opt.Unmarshal(d.buf, msg)
 }
