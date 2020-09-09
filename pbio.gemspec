@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name        = 'pbio'
-  s.version     = '0.2.1'
+  s.version     = '0.2.2'
   s.authors     = ['Dimitrij Denissenko']
   s.email       = ['dimitrij@blacksquaremedia.com']
   s.summary     = 'Protobuf Streaming'
