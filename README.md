@@ -1,5 +1,6 @@
 # PB IO
 
+[![Test](https://github.com/bsm/pbio/actions/workflows/test.yml/badge.svg)](https://github.com/bsm/pbio/actions/workflows/test.yml)
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
 Protobuf IO is a Ruby equivalent of https://godoc.org/github.com/gogo/protobuf/io.
