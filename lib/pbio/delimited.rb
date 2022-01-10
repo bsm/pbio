@@ -7,7 +7,7 @@ module PBIO
     def self.encode_uvarint(num)
       bytes = []
       while num >= 0x80
-        b = num & 0xFF | 0x80
+        b = (num & 0xFF) | 0x80
         bytes << b
         num >>= 7
       end
