@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name        = 'pbio'
-  s.version     = '0.3.1'
+  s.version     = '0.3.2'
   s.authors     = ['Dimitrij Denissenko']
   s.email       = ['dimitrij@blacksquaremedia.com']
   s.summary     = 'Protobuf Streaming'
@@ -9,7 +9,6 @@ Gem::Specification.new do |s|
   s.license     = 'MIT'
 
   s.files         = `git ls-files -z`.split("\x0").reject {|f| f.match(%r{^spec/}) }
-  s.test_files    = `git ls-files -z -- spec/*`.split("\x0")
   s.require_paths = ['lib']
   s.required_ruby_version = '>= 2.7'
 
