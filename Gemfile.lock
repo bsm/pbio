@@ -2,21 +2,20 @@ PATH
   remote: .
   specs:
     pbio (0.3.3)
-      google-protobuf
+      google-protobuf (~> 3)
 
 GEM
   remote: http://rubygems.org/
   specs:
     ast (2.4.2)
     diff-lcs (1.5.0)
-    google-protobuf (4.26.1)
-      rake (>= 13)
+    google-protobuf (3.25.3)
     json (2.6.2)
     parallel (1.22.1)
     parser (3.1.2.1)
       ast (~> 2.4.1)
     rainbow (3.1.1)
-    rake (13.0.6)
+    rake (13.2.1)
     regexp_parser (2.6.0)
     rexml (3.2.8)
       strscan (>= 3.0.9)

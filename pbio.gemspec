@@ -12,7 +12,7 @@ Gem::Specification.new do |s|
   s.require_paths = ['lib']
   s.required_ruby_version = '>= 2.7'
 
-  s.add_dependency 'google-protobuf'
+  s.add_dependency 'google-protobuf', '~> 3'
 
   s.add_development_dependency 'bundler'
   s.add_development_dependency 'rake'
