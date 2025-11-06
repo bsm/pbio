@@ -1,9 +1,20 @@
-inherit_gem:
-  rubocop-bsm:
-    - default.yml
-inherit_mode:
-  merge:
-    - Exclude
+plugins:
+  - rubocop-rake
+  - rubocop-rspec
 
 AllCops:
-  TargetRubyVersion: 2.7
+  NewCops: enable
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
+Layout/SpaceInsideBlockBraces:
+  SpaceBeforeBlockParameters: false
+
+RSpec/ExampleLength:
+  Enabled: false
+RSpec/IndexedLet:
+  Enabled: false
+RSpec/NamedSubject:
+  Enabled: false
+RSpec/MultipleExpectations:
+  Enabled: false
