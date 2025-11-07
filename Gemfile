@@ -4,4 +4,6 @@ gemspec
 gem 'bundler'
 gem 'rake'
 gem 'rspec'
-gem 'rubocop-bsm'
+gem 'rubocop'
+gem 'rubocop-rake'
+gem 'rubocop-rspec'

@@ -2,19 +2,10 @@ plugins:
   - rubocop-rake
   - rubocop-rspec
 
-AllCops:
-  NewCops: enable
+inherit_from:
+  - https://raw.githubusercontent.com/bsm/misc/refs/heads/main/rubocop/default.yml
+  - https://raw.githubusercontent.com/bsm/misc/refs/heads/main/rubocop/rspec.yml
 
-Style/FrozenStringLiteralComment:
-  Enabled: false
-Layout/SpaceInsideBlockBraces:
-  SpaceBeforeBlockParameters: false
-
-RSpec/ExampleLength:
-  Enabled: false
-RSpec/IndexedLet:
-  Enabled: false
-RSpec/NamedSubject:
-  Enabled: false
-RSpec/MultipleExpectations:
-  Enabled: false
+inherit_mode:
+  merge:
+    - Exclude
